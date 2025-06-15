@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="styles/lista.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-title">Lista de Compras</h1>
+                <div class="nav-links">
+                    <a href="cadastro.html" class="nav-link">Cadastro</a>
+                    <a href="lista.html" class="nav-link active">Lista de Compras</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lista-header">
+                <h2>Minha Lista de Compras</h2>
+                <button id="btnEnviarServidor" class="btn btn-success" style="display: none;">
+                    Enviar para Servidor
+                </button>
+            </div>
+            
+            <div class="progresso-container">
+                <div class="progresso-info">
+                    <span id="progressoTexto">0 de 0 itens coletados</span>
+                    <div class="progresso-bar">
+                        <div id="progressoFill" class="progresso-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lista-compras">
+                <div class="table-container">
+                    <table id="tabelaLista" class="lista-table">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Nome do Produto</th>
+                                <th>Unidade</th>
+                                <th>Qtd. Necessária</th>
+                                <th>Qtd. Comprada</th>
+                                <th>Coletado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="mensagemVazia" class="mensagem-vazia" style="display: none;">
+                <p>Nenhum produto ativo encontrado para compra.</p>
+                <a href="cadastro.html" class="btn btn-primary">Cadastrar Produtos</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/lista.js"></script>
+</body>
+</html>
